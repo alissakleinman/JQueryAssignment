@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   	<title>In Class JQuery</title>
+  	</head>
+	<body>
+
+		<h1>My Favorite Food Is...</h1>
+		<h2>CHEESE</h2>
+		<p class="intro">I like cheese.</p>
+		<p class="explanation">The reasons why I enjoy cheese are too many to enumerate.</p>
+		<ul class="list">
+			<li id="1">crackers</li>
+			<li id="2">olives</li>
+			<li id="3">nuts</li>
+		<div>
+			<img class="cheesepic" src="images/Gruyere.jpg">
+		</div>
+		<div>	
+			<img class="cowgirl" src="images/Cowgirl.jpg">
+		</div>
+		<script>
+
+			$(document).ready(function(){
+				$(".cheesepic").hide();
+				$(".cheesepic").show();
+				$(".intro").fadeOut();
+				$("h1").fadeOut(2000);
+				$("h2").slideUp(1000);
+				$(".cowgirl").animate({
+					opacity: 0.25,
+					width: "70%"
+				} , 2000 )
+				$("#1").fadeOut(1000, function() {
+					$("#2").fadeOut(1000, function() {
+						$("#3").fadeOut(1000, function() {
+
+						});
+					});
+				});
+				$(".explanation").mouseenter(function(){
+					alert("You entered the explanation!");
+				});
+			});
+	</script>
+	</body>
+</html>
