@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   	<title>In Class JQuery</title>
+		<link rel="stylesheet" type="text/css" href="assignment6.css">
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script src="assignment6.js"></script>
+   		<title>JQuery Assignment</title>
   	</head>
 	<body>
-
-		<h1>My Favorite Food Is...</h1>
-		<h2>CHEESE</h2>
-		<p class="intro">I like cheese.</p>
-		<p class="explanation">The reasons why I enjoy cheese are too many to enumerate.</p>
-		<ul class="list">
-			<li id="1">crackers</li>
-			<li id="2">olives</li>
-			<li id="3">nuts</li>
-		<div>
-			<img class="cheesepic" src="images/Gruyere.jpg">
-		</div>
-		<div>	
-			<img class="cowgirl" src="images/Cowgirl.jpg">
-		</div>
-		<script>
-
+		<div class="wrapper">
+			<h1>My Favorite Food Is...</h1>
+			<h2>CHEESE</h2>
+			<p class="intro">I like cheese.</p>
+			<p class="explanation">The reasons why I enjoy cheese are too many to enumerate.</p>
+			<h2>These are some excellent foods to eat with cheese</h2>
+			<ul class="list">
+				<li id="1">crackers</li>
+				<li id="2">olives</li>
+				<li id="3">nuts</li>
+			<div>
+				<img class="cheesepic" src="images/Gruyere.jpg">
+			</div>
+			<div>	
+				<img class="cowgirl" src="images/Cowgirl.jpg">
+			</div>
+			<script>
+				//This is the function from the assigntment6.js document.
+				alertName ("Alissa")
+			</script>	
+			<script>
 			$(document).ready(function(){
-				$(".cheesepic").hide();
-				$(".cheesepic").show();
+				//Animation:
 				$(".intro").fadeOut();
 				$("h1").fadeOut(2000);
 				$("h2").slideUp(1000);
 				$(".cowgirl").animate({
-					opacity: 0.25,
+					opacity: 0.5,
 					width: "70%"
 				} , 2000 )
+				//More animation with some neat timing:
 				$("#1").fadeOut(1000, function() {
 					$("#2").fadeOut(1000, function() {
 						$("#3").fadeOut(1000, function() {
-
 						});
 					});
 				});
+				//When I enter this area of the page, this alert should pop up as an alert.
 				$(".explanation").mouseenter(function(){
-					alert("You entered the explanation!");
+					alert('You entered the explanation!');
+				});
+				//I thought I'd try to add a change to the CSS.
+				$(".explanation").addClass("TheReasons");
+				//And here's a click event.
+				$(".cheesepic").click (function(){
+					$(this).hide();
 				});
 			});
-	</script>
+			</script>
+		</div>	
 	</body>
 </html>

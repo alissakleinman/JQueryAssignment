@@ -1,0 +1,14 @@
+.wrapper{
+	width: 900px;
+	margin: auto;
+}
+h1, h2{
+	text-align: center;
+	text-transform: uppercase;
+}
+.TheReasons{
+	font-weight: bold;
+	font-family: "Georgia";
+	font-size: large;
+	color: green;
+}
