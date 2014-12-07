@@ -10,7 +10,12 @@ function alertName (somename){
 
 //To call JQuery functions, you use the dollar sign. I called the following in the console:
 
-$(".cowgirl").hide;
+//$(".cowgirl").slideUp()
+
+//And the image slid up!
+
+//Of use in the html document is an anonymouse function on line 27. $(document).ready () ensures that the functions that follow it aren't loaded until the page is ready.
+
 
 
 
